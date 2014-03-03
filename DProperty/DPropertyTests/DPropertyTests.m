@@ -180,6 +180,8 @@
     XCTAssert(o1.doubleDefault == 124.0, @"double: %f", o1.doubleDefault);
     o2.doubleDefault = 555;
     XCTAssert(o2.doubleDefault == 555, @"double: %f", o2.doubleDefault);
+    
+    XCTAssert(o1.doubleDefault == 124.0, @"double: %f", o1.doubleDefault);
     o1.doubleDefault = 456.0;
     XCTAssert(o1.doubleDefault == 456.0, @"double: %f", o1.doubleDefault);
 }
@@ -193,6 +195,8 @@
     XCTAssert(o1.floatDefault == 124.0f, @"float: %f", o1.floatDefault);
     o2.floatDefault = 555.f;
     XCTAssert(o2.floatDefault == 555.f, @"float: %f", o2.floatDefault);
+
+    XCTAssert(o1.floatDefault == 124.0f, @"float: %f", o1.floatDefault);
     o1.floatDefault = 456.0f;
     XCTAssert(o1.floatDefault == 456.0f, @"float: %f", o1.floatDefault);
 }
@@ -340,8 +344,8 @@
     XCTAssert(o1.enumDefault == kEnumDProperty1, @"enum: %d", o1.enumDefault);
     o2.enumDefault = kEnumDProperty2;
     XCTAssert(o2.enumDefault == kEnumDProperty2, @"enum: %d", o2.enumDefault);
-    o1.enumDefault = kEnumDProperty2;
-    XCTAssert(o1.enumDefault == kEnumDProperty2, @"enum: %d", o1.enumDefault);
+
+    XCTAssert(o1.enumDefault == kEnumDProperty1, @"enum: %d", o1.enumDefault);
 }
 
 - (void)testStructDefault
@@ -357,9 +361,9 @@
     o2.structDefault = s2;
     XCTAssert(o2.structDefault.x == s2.x, @"struct.x: %d", o2.structDefault.x);
     XCTAssert(o2.structDefault.y == s2.y, @"struct.y: %d", o2.structDefault.y);
-    o1.structDefault = s2;
-    XCTAssert(o1.structDefault.x == s2.x, @"struct.x: %d", o1.structDefault.x);
-    XCTAssert(o1.structDefault.y == s2.y, @"struct.y: %d", o1.structDefault.y);
+
+    XCTAssert(o1.structDefault.x == s1.x, @"struct.x: %d", o1.structDefault.x);
+    XCTAssert(o1.structDefault.y == s1.y, @"struct.y: %d", o1.structDefault.y);
 }
 
 - (void)testTypeOfDefault
@@ -375,9 +379,9 @@
     o2.typedefDefault = s2;
     XCTAssert(o2.typedefDefault.x == s2.x, @"struct.x: %d", o2.typedefDefault.x);
     XCTAssert(o2.typedefDefault.y == s2.y, @"struct.y: %d", o2.typedefDefault.y);
-    o1.typedefDefault = s2;
-    XCTAssert(o1.typedefDefault.x == s2.x, @"struct.x: %d", o1.typedefDefault.x);
-    XCTAssert(o1.typedefDefault.y == s2.y, @"struct.y: %d", o1.typedefDefault.y);
+
+    XCTAssert(o1.typedefDefault.x == s1.x, @"struct.x: %d", o1.typedefDefault.x);
+    XCTAssert(o1.typedefDefault.y == s1.y, @"struct.y: %d", o1.typedefDefault.y);
 }
 
 - (void)testUnionDefault
@@ -393,9 +397,9 @@
     o2.unionDefault = s2;
     XCTAssert(o2.unionDefault.x == s2.x, @"union.x: %d", o2.unionDefault.x);
     XCTAssert(o2.unionDefault.y == s2.y, @"union.y: %d", o2.unionDefault.y);
-    o1.unionDefault = s2;
-    XCTAssert(o1.unionDefault.x == s2.x, @"union.x: %d", o1.unionDefault.x);
-    XCTAssert(o1.unionDefault.y == s2.y, @"union.y: %d", o1.unionDefault.y);
+
+    XCTAssert(o1.unionDefault.x == s1.x, @"union.x: %d", o1.unionDefault.x);
+    XCTAssert(o1.unionDefault.y == s1.y, @"union.y: %d", o1.unionDefault.y);
 }
 
 int testFunctionDProperty1(char *c)
@@ -418,8 +422,8 @@ int testFunctionDProperty2(char *c)
     XCTAssert(o1.functionPointerDefault == f1, @"pointer");
     o2.functionPointerDefault = f2;
     XCTAssert(o2.functionPointerDefault == f2, @"pointer");
-    o1.functionPointerDefault = f2;
-    XCTAssert(o1.functionPointerDefault == f2, @"pointer");
+
+    XCTAssert(o1.functionPointerDefault == f1, @"pointer");
 }
 
 - (void)testIntPointerDefault
@@ -433,8 +437,8 @@ int testFunctionDProperty2(char *c)
     XCTAssert(o1.intPointerDefault == &i1, @"pointer");
     o2.intPointerDefault = &i2;
     XCTAssert(o2.intPointerDefault == &i2, @"pointer");
-    o1.intPointerDefault = &i2;
-    XCTAssert(o1.intPointerDefault == &i2, @"pointer");
+
+    XCTAssert(o1.intPointerDefault == &i1, @"pointer");
 }
 
 - (void)testVoidPointerDefault
@@ -450,8 +454,8 @@ int testFunctionDProperty2(char *c)
     XCTAssert(o1.voidPointerDefault == v1, @"pointer");
     o2.voidPointerDefault = v2;
     XCTAssert(o2.voidPointerDefault == v2, @"pointer");
-    o1.voidPointerDefault = v2;
-    XCTAssert(o1.voidPointerDefault == v2, @"pointer");
+
+    XCTAssert(o1.voidPointerDefault == v1, @"pointer");
 }
 
 - (void)testIdDefault
