@@ -24,14 +24,17 @@
 - (void)testDebug
 {
     /*
+    DPropertyTestClass1 *o1 = [DPropertyTestClass1 new];
+    o1.idDefault = @"a";
     DPropertyTestClass1 *o = [DPropertyTestClass1 new];
-        for (int i = 0; i < 1000000; i++) {
-            @autoreleasepool {
+        for (int i = 0; i < 100000; i++) {
+//            @autoreleasepool {
                 o.idDefault = [NSString stringWithFormat:@"ABBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB %d", i];
                 o.doubleDefault = i;
                 o.intPointerDefault = &i;
-            }
+//            }
         }
+    XCTAssert([o1.idDefault isEqual:@"a"], @"id: %@", o1.idDefault);
      */
 }
 

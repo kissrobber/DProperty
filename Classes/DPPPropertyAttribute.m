@@ -68,7 +68,7 @@
         }
     }
     
-    self.key = propertyName;
+    self.key = property;
     
     return self;
 }

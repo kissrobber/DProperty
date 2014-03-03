@@ -246,24 +246,24 @@ DPPPropertyAttribute* DPP_getProp(id self, SEL _cmd)
 void DPP_accessorIdSetter(id self, SEL _cmd, id newValue)
 {
     DPPPropertyAttribute *prop = DPP_getProp(self, _cmd);
-    objc_setAssociatedObject(self, (__bridge const void *)(prop.key), newValue, prop.retentionMethod);
+    objc_setAssociatedObject(self, prop.key, newValue, prop.retentionMethod);
 }
 id DPP_accessorIdGetter(id self, SEL _cmd)
 {
     DPPPropertyAttribute *prop = DPP_getProp(self, _cmd);
-    return objc_getAssociatedObject(self, (__bridge const void *)(prop.key));
+    return objc_getAssociatedObject(self, prop.key);
 }
 
 void DPP_accessorBOOLSetter(id self, SEL _cmd, BOOL newValue)
 {
     DPPPropertyAttribute *prop = DPP_getProp(self, _cmd);
     id tmp = [NSNumber numberWithBool:newValue];
-    objc_setAssociatedObject(self, (__bridge const void *)(prop.key), tmp, prop.retentionMethod);
+    objc_setAssociatedObject(self, prop.key, tmp, prop.retentionMethod);
 }
 BOOL DPP_accessorBOOLGetter(id self, SEL _cmd)
 {
     DPPPropertyAttribute *prop = DPP_getProp(self, _cmd);
-    NSNumber *tmp = objc_getAssociatedObject(self, (__bridge const void *)(prop.key));
+    NSNumber *tmp = objc_getAssociatedObject(self, prop.key);
     return [tmp boolValue];
 }
 
@@ -271,12 +271,12 @@ void DPP_accessorCharSetter(id self, SEL _cmd, char newValue)
 {
     DPPPropertyAttribute *prop = DPP_getProp(self, _cmd);
     id tmp = [NSNumber numberWithChar:newValue];
-    objc_setAssociatedObject(self, (__bridge const void *)(prop.key), tmp, prop.retentionMethod);
+    objc_setAssociatedObject(self, prop.key, tmp, prop.retentionMethod);
 }
 char DPP_accessorCharGetter(id self, SEL _cmd)
 {
     DPPPropertyAttribute *prop = DPP_getProp(self, _cmd);
-    NSNumber *tmp = objc_getAssociatedObject(self, (__bridge const void *)(prop.key));
+    NSNumber *tmp = objc_getAssociatedObject(self, prop.key);
     return [tmp charValue];
 }
 
@@ -284,12 +284,12 @@ void DPP_accessorDoubleSetter(id self, SEL _cmd, double newValue)
 {
     DPPPropertyAttribute *prop = DPP_getProp(self, _cmd);
     id tmp = [NSNumber numberWithDouble:newValue];
-    objc_setAssociatedObject(self, (__bridge const void *)(prop.key), tmp, prop.retentionMethod);
+    objc_setAssociatedObject(self, prop.key, tmp, prop.retentionMethod);
 }
 double DPP_accessorDoubleGetter(id self, SEL _cmd)
 {
     DPPPropertyAttribute *prop = DPP_getProp(self, _cmd);
-    NSNumber *tmp = objc_getAssociatedObject(self, (__bridge const void *)(prop.key));
+    NSNumber *tmp = objc_getAssociatedObject(self, prop.key);
     return [tmp doubleValue];
 }
 
@@ -297,12 +297,12 @@ void DPP_accessorFloatSetter(id self, SEL _cmd, float newValue)
 {
     DPPPropertyAttribute *prop = DPP_getProp(self, _cmd);
     id tmp = [NSNumber numberWithFloat:newValue];
-    objc_setAssociatedObject(self, (__bridge const void *)(prop.key), tmp, prop.retentionMethod);
+    objc_setAssociatedObject(self, prop.key, tmp, prop.retentionMethod);
 }
 float DPP_accessorFloatGetter(id self, SEL _cmd)
 {
     DPPPropertyAttribute *prop = DPP_getProp(self, _cmd);
-    NSNumber *tmp = objc_getAssociatedObject(self, (__bridge const void *)(prop.key));
+    NSNumber *tmp = objc_getAssociatedObject(self, prop.key);
     return [tmp floatValue];
 }
 
@@ -310,12 +310,12 @@ void DPP_accessorIntSetter(id self, SEL _cmd, int newValue)
 {
     DPPPropertyAttribute *prop = DPP_getProp(self, _cmd);
     id tmp = [NSNumber numberWithInt:newValue];
-    objc_setAssociatedObject(self, (__bridge const void *)(prop.key), tmp, prop.retentionMethod);
+    objc_setAssociatedObject(self, prop.key, tmp, prop.retentionMethod);
 }
 int DPP_accessorIntGetter(id self, SEL _cmd)
 {
     DPPPropertyAttribute *prop = DPP_getProp(self, _cmd);
-    NSNumber *tmp = objc_getAssociatedObject(self, (__bridge const void *)(prop.key));
+    NSNumber *tmp = objc_getAssociatedObject(self, prop.key);
     return [tmp intValue];
 }
 
@@ -323,12 +323,12 @@ void DPP_accessorLongSetter(id self, SEL _cmd, long newValue)
 {
     DPPPropertyAttribute *prop = DPP_getProp(self, _cmd);
     id tmp = [NSNumber numberWithLong:newValue];
-    objc_setAssociatedObject(self, (__bridge const void *)(prop.key), tmp, prop.retentionMethod);
+    objc_setAssociatedObject(self, prop.key, tmp, prop.retentionMethod);
 }
 long DPP_accessorLongGetter(id self, SEL _cmd)
 {
     DPPPropertyAttribute *prop = DPP_getProp(self, _cmd);
-    NSNumber *tmp = objc_getAssociatedObject(self, (__bridge const void *)(prop.key));
+    NSNumber *tmp = objc_getAssociatedObject(self, prop.key);
     return [tmp longValue];
 }
 
@@ -336,12 +336,12 @@ void DPP_accessorLongLongSetter(id self, SEL _cmd, long long newValue)
 {
     DPPPropertyAttribute *prop = DPP_getProp(self, _cmd);
     id tmp = [NSNumber numberWithLongLong:newValue];
-    objc_setAssociatedObject(self, (__bridge const void *)(prop.key), tmp, prop.retentionMethod);
+    objc_setAssociatedObject(self, prop.key, tmp, prop.retentionMethod);
 }
 long DPP_accessorLongLongGetter(id self, SEL _cmd)
 {
     DPPPropertyAttribute *prop = DPP_getProp(self, _cmd);
-    NSNumber *tmp = objc_getAssociatedObject(self, (__bridge const void *)(prop.key));
+    NSNumber *tmp = objc_getAssociatedObject(self, prop.key);
     return [tmp longLongValue];
 }
 
@@ -349,12 +349,12 @@ void DPP_accessorShortSetter(id self, SEL _cmd, long newValue)
 {
     DPPPropertyAttribute *prop = DPP_getProp(self, _cmd);
     id tmp = [NSNumber numberWithShort:newValue];
-    objc_setAssociatedObject(self, (__bridge const void *)(prop.key), tmp, prop.retentionMethod);
+    objc_setAssociatedObject(self, prop.key, tmp, prop.retentionMethod);
 }
 short DPP_accessorShortGetter(id self, SEL _cmd)
 {
     DPPPropertyAttribute *prop = DPP_getProp(self, _cmd);
-    NSNumber *tmp = objc_getAssociatedObject(self, (__bridge const void *)(prop.key));
+    NSNumber *tmp = objc_getAssociatedObject(self, prop.key);
     return [tmp shortValue];
 }
 
@@ -362,12 +362,12 @@ void DPP_accessorUnsignedCharSetter(id self, SEL _cmd, unsigned char newValue)
 {
     DPPPropertyAttribute *prop = DPP_getProp(self, _cmd);
     id tmp = [NSNumber numberWithUnsignedChar:newValue];
-    objc_setAssociatedObject(self, (__bridge const void *)(prop.key), tmp, prop.retentionMethod);
+    objc_setAssociatedObject(self, prop.key, tmp, prop.retentionMethod);
 }
 unsigned char DPP_accessorUnsignedCharGetter(id self, SEL _cmd)
 {
     DPPPropertyAttribute *prop = DPP_getProp(self, _cmd);
-    NSNumber *tmp = objc_getAssociatedObject(self, (__bridge const void *)(prop.key));
+    NSNumber *tmp = objc_getAssociatedObject(self, prop.key);
     return [tmp unsignedCharValue];
 }
 
@@ -375,12 +375,12 @@ void DPP_accessorUnsignedSetter(id self, SEL _cmd, unsigned newValue)
 {
     DPPPropertyAttribute *prop = DPP_getProp(self, _cmd);
     id tmp = [NSNumber numberWithUnsignedInt:newValue];
-    objc_setAssociatedObject(self, (__bridge const void *)(prop.key), tmp, prop.retentionMethod);
+    objc_setAssociatedObject(self, prop.key, tmp, prop.retentionMethod);
 }
 unsigned DPP_accessorUnsignedGetter(id self, SEL _cmd)
 {
     DPPPropertyAttribute *prop = DPP_getProp(self, _cmd);
-    NSNumber *tmp = objc_getAssociatedObject(self, (__bridge const void *)(prop.key));
+    NSNumber *tmp = objc_getAssociatedObject(self, prop.key);
     return [tmp unsignedIntValue];
 }
 
@@ -388,12 +388,12 @@ void DPP_accessorUnsignedLongLongSetter(id self, SEL _cmd, unsigned newValue)
 {
     DPPPropertyAttribute *prop = DPP_getProp(self, _cmd);
     id tmp = [NSNumber numberWithUnsignedLongLong:newValue];
-    objc_setAssociatedObject(self, (__bridge const void *)(prop.key), tmp, prop.retentionMethod);
+    objc_setAssociatedObject(self, prop.key, tmp, prop.retentionMethod);
 }
 unsigned long long DPP_accessorUnsignedLongLongGetter(id self, SEL _cmd)
 {
     DPPPropertyAttribute *prop = DPP_getProp(self, _cmd);
-    NSNumber *tmp = objc_getAssociatedObject(self, (__bridge const void *)(prop.key));
+    NSNumber *tmp = objc_getAssociatedObject(self, prop.key);
     return [tmp unsignedLongLongValue];
 }
 
@@ -401,12 +401,12 @@ void DPP_accessorUnsignedShortSetter(id self, SEL _cmd, unsigned short newValue)
 {
     DPPPropertyAttribute *prop = DPP_getProp(self, _cmd);
     id tmp = [NSNumber numberWithUnsignedShort:newValue];
-    objc_setAssociatedObject(self, (__bridge const void *)(prop.key), tmp, prop.retentionMethod);
+    objc_setAssociatedObject(self, prop.key, tmp, prop.retentionMethod);
 }
 unsigned short DPP_accessorUnsignedShortGetter(id self, SEL _cmd)
 {
     DPPPropertyAttribute *prop = DPP_getProp(self, _cmd);
-    NSNumber *tmp = objc_getAssociatedObject(self, (__bridge const void *)(prop.key));
+    NSNumber *tmp = objc_getAssociatedObject(self, prop.key);
     return [tmp unsignedShortValue];
 }
 
@@ -414,12 +414,12 @@ void DPP_accessorPointerSetter(id self, SEL _cmd, void *newValue)
 {
     DPPPropertyAttribute *prop = DPP_getProp(self, _cmd);
     id tmp = [NSValue valueWithPointer:newValue];
-    objc_setAssociatedObject(self, (__bridge const void *)(prop.key), tmp, prop.retentionMethod);
+    objc_setAssociatedObject(self, prop.key, tmp, prop.retentionMethod);
 }
 void* DPP_accessorPointerGetter(id self, SEL _cmd)
 {
     DPPPropertyAttribute *prop = DPP_getProp(self, _cmd);
-    NSValue *tmp = objc_getAssociatedObject(self, (__bridge const void *)(prop.key));
+    NSValue *tmp = objc_getAssociatedObject(self, prop.key);
     return [tmp pointerValue];
 }
 
