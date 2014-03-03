@@ -16,7 +16,7 @@ Nothing special. Just add property normally in a @interface and use @dynamic in 
 
 @end
 
-@implementation NSBubbleData (FRC)
+@implementation YourClass (YourCategory)
 
 @dynamic yourProperty;
 
