@@ -22,7 +22,7 @@ union UnionDProperty
 
 @interface DPropertyTestClass1 (Cate1)
 
-@property BOOL boolDefault; //
+@property (nonatomic)BOOL boolDefault; //
 @property char charDefault; //Tc,VcharDefault
 @property double doubleDefault; //Td,VdoubleDefault
 @property float floatDefault; //Tf,VfloatDefault

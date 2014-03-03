@@ -106,6 +106,10 @@ NSString* DPP_propertyNameOf(SEL aSEL)
             class_addMethod([self class], aSEL, (IMP) DPP_accessorPointerSetter, "v@:@");
             return YES;
             break;
+        case 'B':
+            class_addMethod([self class], aSEL, (IMP) DPP_accessorBOOLSetter, "v@:@");
+            return YES;
+            break;
         default:
             return NO;
             break;
@@ -167,6 +171,10 @@ NSString* DPP_propertyNameOf(SEL aSEL)
         case '(':
         case '^':
             class_addMethod([self class], aSEL, (IMP) DPP_accessorPointerGetter, "@@:");
+            return YES;
+            break;
+        case 'B':
+            class_addMethod([self class], aSEL, (IMP) DPP_accessorBOOLGetter, "@@:");
             return YES;
             break;
         default:
