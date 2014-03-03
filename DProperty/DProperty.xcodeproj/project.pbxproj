@@ -1,0 +1,520 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29050A9A18C43B970085F289 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29050A9918C43B970085F289 /* Cocoa.framework */; };
+		29050AA418C43B970085F289 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29050AA218C43B970085F289 /* InfoPlist.strings */; };
+		29050AA818C43B970085F289 /* DProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 29050AA718C43B970085F289 /* DProperty.m */; };
+		29050AAF18C43B970085F289 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29050AAE18C43B970085F289 /* XCTest.framework */; };
+		29050AB018C43B970085F289 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29050A9918C43B970085F289 /* Cocoa.framework */; };
+		29050AB318C43B970085F289 /* DProperty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29050A9618C43B970085F289 /* DProperty.framework */; };
+		29050AB918C43B970085F289 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29050AB718C43B970085F289 /* InfoPlist.strings */; };
+		29050ABB18C43B970085F289 /* DPropertyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 29050ABA18C43B970085F289 /* DPropertyTests.m */; };
+		29050AC918C43D6E0085F289 /* DPPPropertyAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 29050AC518C43D6E0085F289 /* DPPPropertyAttribute.h */; };
+		29050ACA18C43D6E0085F289 /* DPPPropertyAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 29050AC618C43D6E0085F289 /* DPPPropertyAttribute.m */; };
+		29050ACB18C43D6E0085F289 /* NSObject+DProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 29050AC718C43D6E0085F289 /* NSObject+DProperty.h */; };
+		29050ACC18C43D6E0085F289 /* NSObject+DProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 29050AC818C43D6E0085F289 /* NSObject+DProperty.m */; };
+		29050AD518C440DA0085F289 /* DPropertyTestClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 29050ACD18C440DA0085F289 /* DPropertyTestClass.h */; };
+		29050AD618C440DA0085F289 /* DPropertyTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 29050ACE18C440DA0085F289 /* DPropertyTestClass.m */; };
+		29050AD718C440DA0085F289 /* DPropertyTestClass+Cate.h in Headers */ = {isa = PBXBuildFile; fileRef = 29050ACF18C440DA0085F289 /* DPropertyTestClass+Cate.h */; };
+		29050AD818C440DA0085F289 /* DPropertyTestClass+Cate.m in Sources */ = {isa = PBXBuildFile; fileRef = 29050AD018C440DA0085F289 /* DPropertyTestClass+Cate.m */; };
+		29050AD918C440DA0085F289 /* DPropertyTestClass1.h in Headers */ = {isa = PBXBuildFile; fileRef = 29050AD118C440DA0085F289 /* DPropertyTestClass1.h */; };
+		29050ADA18C440DA0085F289 /* DPropertyTestClass1.m in Sources */ = {isa = PBXBuildFile; fileRef = 29050AD218C440DA0085F289 /* DPropertyTestClass1.m */; };
+		29050ADB18C440DA0085F289 /* DPropertyTestClass1+Cate1.h in Headers */ = {isa = PBXBuildFile; fileRef = 29050AD318C440DA0085F289 /* DPropertyTestClass1+Cate1.h */; };
+		29050ADC18C440DA0085F289 /* DPropertyTestClass1+Cate1.m in Sources */ = {isa = PBXBuildFile; fileRef = 29050AD418C440DA0085F289 /* DPropertyTestClass1+Cate1.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		29050AB118C43B970085F289 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29050A8D18C43B970085F289 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29050A9518C43B970085F289;
+			remoteInfo = DProperty;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		29050A9618C43B970085F289 /* DProperty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DProperty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29050A9918C43B970085F289 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		29050A9C18C43B970085F289 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		29050A9D18C43B970085F289 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		29050A9E18C43B970085F289 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		29050AA118C43B970085F289 /* DProperty-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DProperty-Info.plist"; sourceTree = "<group>"; };
+		29050AA318C43B970085F289 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		29050AA518C43B970085F289 /* DProperty-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DProperty-Prefix.pch"; sourceTree = "<group>"; };
+		29050AA618C43B970085F289 /* DProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DProperty.h; sourceTree = "<group>"; };
+		29050AA718C43B970085F289 /* DProperty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DProperty.m; sourceTree = "<group>"; };
+		29050AAD18C43B970085F289 /* DPropertyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DPropertyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		29050AAE18C43B970085F289 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		29050AB618C43B970085F289 /* DPropertyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DPropertyTests-Info.plist"; sourceTree = "<group>"; };
+		29050AB818C43B970085F289 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		29050ABA18C43B970085F289 /* DPropertyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPropertyTests.m; sourceTree = "<group>"; };
+		29050AC518C43D6E0085F289 /* DPPPropertyAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPPPropertyAttribute.h; sourceTree = "<group>"; };
+		29050AC618C43D6E0085F289 /* DPPPropertyAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPPPropertyAttribute.m; sourceTree = "<group>"; };
+		29050AC718C43D6E0085F289 /* NSObject+DProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DProperty.h"; sourceTree = "<group>"; };
+		29050AC818C43D6E0085F289 /* NSObject+DProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DProperty.m"; sourceTree = "<group>"; };
+		29050ACD18C440DA0085F289 /* DPropertyTestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPropertyTestClass.h; sourceTree = "<group>"; };
+		29050ACE18C440DA0085F289 /* DPropertyTestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPropertyTestClass.m; sourceTree = "<group>"; };
+		29050ACF18C440DA0085F289 /* DPropertyTestClass+Cate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DPropertyTestClass+Cate.h"; sourceTree = "<group>"; };
+		29050AD018C440DA0085F289 /* DPropertyTestClass+Cate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DPropertyTestClass+Cate.m"; sourceTree = "<group>"; };
+		29050AD118C440DA0085F289 /* DPropertyTestClass1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPropertyTestClass1.h; sourceTree = "<group>"; };
+		29050AD218C440DA0085F289 /* DPropertyTestClass1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPropertyTestClass1.m; sourceTree = "<group>"; };
+		29050AD318C440DA0085F289 /* DPropertyTestClass1+Cate1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DPropertyTestClass1+Cate1.h"; sourceTree = "<group>"; };
+		29050AD418C440DA0085F289 /* DPropertyTestClass1+Cate1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DPropertyTestClass1+Cate1.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29050A9218C43B970085F289 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29050A9A18C43B970085F289 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29050AAA18C43B970085F289 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29050AB318C43B970085F289 /* DProperty.framework in Frameworks */,
+				29050AB018C43B970085F289 /* Cocoa.framework in Frameworks */,
+				29050AAF18C43B970085F289 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		29050A8C18C43B970085F289 = {
+			isa = PBXGroup;
+			children = (
+				29050A9F18C43B970085F289 /* DProperty */,
+				29050AB418C43B970085F289 /* DPropertyTests */,
+				29050A9818C43B970085F289 /* Frameworks */,
+				29050A9718C43B970085F289 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		29050A9718C43B970085F289 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29050A9618C43B970085F289 /* DProperty.framework */,
+				29050AAD18C43B970085F289 /* DPropertyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29050A9818C43B970085F289 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29050A9918C43B970085F289 /* Cocoa.framework */,
+				29050AAE18C43B970085F289 /* XCTest.framework */,
+				29050A9B18C43B970085F289 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		29050A9B18C43B970085F289 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29050A9C18C43B970085F289 /* Foundation.framework */,
+				29050A9D18C43B970085F289 /* CoreData.framework */,
+				29050A9E18C43B970085F289 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		29050A9F18C43B970085F289 /* DProperty */ = {
+			isa = PBXGroup;
+			children = (
+				29050AC418C43D6E0085F289 /* Classes */,
+				29050AA618C43B970085F289 /* DProperty.h */,
+				29050AA718C43B970085F289 /* DProperty.m */,
+				29050ACD18C440DA0085F289 /* DPropertyTestClass.h */,
+				29050ACE18C440DA0085F289 /* DPropertyTestClass.m */,
+				29050ACF18C440DA0085F289 /* DPropertyTestClass+Cate.h */,
+				29050AD018C440DA0085F289 /* DPropertyTestClass+Cate.m */,
+				29050AD118C440DA0085F289 /* DPropertyTestClass1.h */,
+				29050AD218C440DA0085F289 /* DPropertyTestClass1.m */,
+				29050AD318C440DA0085F289 /* DPropertyTestClass1+Cate1.h */,
+				29050AD418C440DA0085F289 /* DPropertyTestClass1+Cate1.m */,
+				29050AA018C43B970085F289 /* Supporting Files */,
+			);
+			path = DProperty;
+			sourceTree = "<group>";
+		};
+		29050AA018C43B970085F289 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				29050AA118C43B970085F289 /* DProperty-Info.plist */,
+				29050AA218C43B970085F289 /* InfoPlist.strings */,
+				29050AA518C43B970085F289 /* DProperty-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		29050AB418C43B970085F289 /* DPropertyTests */ = {
+			isa = PBXGroup;
+			children = (
+				29050ABA18C43B970085F289 /* DPropertyTests.m */,
+				29050AB518C43B970085F289 /* Supporting Files */,
+			);
+			path = DPropertyTests;
+			sourceTree = "<group>";
+		};
+		29050AB518C43B970085F289 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				29050AB618C43B970085F289 /* DPropertyTests-Info.plist */,
+				29050AB718C43B970085F289 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		29050AC418C43D6E0085F289 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				29050AC518C43D6E0085F289 /* DPPPropertyAttribute.h */,
+				29050AC618C43D6E0085F289 /* DPPPropertyAttribute.m */,
+				29050AC718C43D6E0085F289 /* NSObject+DProperty.h */,
+				29050AC818C43D6E0085F289 /* NSObject+DProperty.m */,
+			);
+			name = Classes;
+			path = ../../Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		29050A9318C43B970085F289 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29050ACB18C43D6E0085F289 /* NSObject+DProperty.h in Headers */,
+				29050AD918C440DA0085F289 /* DPropertyTestClass1.h in Headers */,
+				29050AC918C43D6E0085F289 /* DPPPropertyAttribute.h in Headers */,
+				29050AD718C440DA0085F289 /* DPropertyTestClass+Cate.h in Headers */,
+				29050ADB18C440DA0085F289 /* DPropertyTestClass1+Cate1.h in Headers */,
+				29050AD518C440DA0085F289 /* DPropertyTestClass.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		29050A9518C43B970085F289 /* DProperty */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29050ABE18C43B970085F289 /* Build configuration list for PBXNativeTarget "DProperty" */;
+			buildPhases = (
+				29050A9118C43B970085F289 /* Sources */,
+				29050A9218C43B970085F289 /* Frameworks */,
+				29050A9318C43B970085F289 /* Headers */,
+				29050A9418C43B970085F289 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DProperty;
+			productName = DProperty;
+			productReference = 29050A9618C43B970085F289 /* DProperty.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		29050AAC18C43B970085F289 /* DPropertyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29050AC118C43B970085F289 /* Build configuration list for PBXNativeTarget "DPropertyTests" */;
+			buildPhases = (
+				29050AA918C43B970085F289 /* Sources */,
+				29050AAA18C43B970085F289 /* Frameworks */,
+				29050AAB18C43B970085F289 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				29050AB218C43B970085F289 /* PBXTargetDependency */,
+			);
+			name = DPropertyTests;
+			productName = DPropertyTests;
+			productReference = 29050AAD18C43B970085F289 /* DPropertyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29050A8D18C43B970085F289 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "keiji matsumoto";
+				TargetAttributes = {
+					29050AAC18C43B970085F289 = {
+						TestTargetID = 29050A9518C43B970085F289;
+					};
+				};
+			};
+			buildConfigurationList = 29050A9018C43B970085F289 /* Build configuration list for PBXProject "DProperty" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 29050A8C18C43B970085F289;
+			productRefGroup = 29050A9718C43B970085F289 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				29050A9518C43B970085F289 /* DProperty */,
+				29050AAC18C43B970085F289 /* DPropertyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		29050A9418C43B970085F289 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29050AA418C43B970085F289 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29050AAB18C43B970085F289 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29050AB918C43B970085F289 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29050A9118C43B970085F289 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29050ADA18C440DA0085F289 /* DPropertyTestClass1.m in Sources */,
+				29050ACC18C43D6E0085F289 /* NSObject+DProperty.m in Sources */,
+				29050AD818C440DA0085F289 /* DPropertyTestClass+Cate.m in Sources */,
+				29050ACA18C43D6E0085F289 /* DPPPropertyAttribute.m in Sources */,
+				29050AD618C440DA0085F289 /* DPropertyTestClass.m in Sources */,
+				29050AA818C43B970085F289 /* DProperty.m in Sources */,
+				29050ADC18C440DA0085F289 /* DPropertyTestClass1+Cate1.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29050AA918C43B970085F289 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29050ABB18C43B970085F289 /* DPropertyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		29050AB218C43B970085F289 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29050A9518C43B970085F289 /* DProperty */;
+			targetProxy = 29050AB118C43B970085F289 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		29050AA218C43B970085F289 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29050AA318C43B970085F289 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29050AB718C43B970085F289 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29050AB818C43B970085F289 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		29050ABC18C43B970085F289 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		29050ABD18C43B970085F289 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		29050ABF18C43B970085F289 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DProperty/DProperty-Prefix.pch";
+				INFOPLIST_FILE = "DProperty/DProperty-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		29050AC018C43B970085F289 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DProperty/DProperty-Prefix.pch";
+				INFOPLIST_FILE = "DProperty/DProperty-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		29050AC218C43B970085F289 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DProperty.framework/Versions/A/DProperty";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DProperty/DProperty-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "DPropertyTests/DPropertyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		29050AC318C43B970085F289 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DProperty.framework/Versions/A/DProperty";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DProperty/DProperty-Prefix.pch";
+				INFOPLIST_FILE = "DPropertyTests/DPropertyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		29050A9018C43B970085F289 /* Build configuration list for PBXProject "DProperty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29050ABC18C43B970085F289 /* Debug */,
+				29050ABD18C43B970085F289 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29050ABE18C43B970085F289 /* Build configuration list for PBXNativeTarget "DProperty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29050ABF18C43B970085F289 /* Debug */,
+				29050AC018C43B970085F289 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		29050AC118C43B970085F289 /* Build configuration list for PBXNativeTarget "DPropertyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29050AC218C43B970085F289 /* Debug */,
+				29050AC318C43B970085F289 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29050A8D18C43B970085F289 /* Project object */;
+}
