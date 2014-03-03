@@ -2,6 +2,7 @@
 
 @implementation DPropertyTestClass1 (Cate1)
 
+@dynamic booleanDefault;
 @dynamic boolDefault;
 @dynamic charDefault;
 @dynamic doubleDefault;

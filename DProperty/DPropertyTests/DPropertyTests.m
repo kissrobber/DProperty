@@ -136,6 +136,23 @@
     XCTAssert(pa.dynamic, @"dynamic: %d", pa.dynamic);
 }
 
+- (void)testBooleanDefault
+{
+    DPropertyTestClass1 *o1 = [DPropertyTestClass1 new];
+    DPropertyTestClass1 *o2 = [DPropertyTestClass1 new];
+    
+    o1.booleanDefault = YES;
+    XCTAssert(o1.booleanDefault == YES, @"bool: %c", o1.booleanDefault);
+    o2.booleanDefault = NO;
+    XCTAssert(o2.booleanDefault == NO, @"bool: %c", o2.booleanDefault);
+    o1.booleanDefault = NO;
+    XCTAssert(o1.booleanDefault == NO, @"bool: %c", o1.booleanDefault);
+    XCTAssert(o2.booleanDefault == NO, @"bool: %c", o2.booleanDefault);
+
+    DPPPropertyAttribute *pa = [DPPPropertyAttribute propertyWithClass:[o1 class] propertyName:@"booleanDefault"];
+    XCTAssert(pa.retentionMethod == OBJC_ASSOCIATION_RETAIN, @"retentionMethod: %d", pa.retentionMethod);
+}
+
 - (void)testBoolDefault
 {
     DPropertyTestClass1 *o1 = [DPropertyTestClass1 new];
@@ -148,6 +165,9 @@
     o1.boolDefault = NO;
     XCTAssert(o1.boolDefault == NO, @"bool: %c", o1.boolDefault);
     XCTAssert(o2.boolDefault == NO, @"bool: %c", o2.boolDefault);
+
+    DPPPropertyAttribute *pa = [DPPPropertyAttribute propertyWithClass:[o1 class] propertyName:@"boolDefault"];
+    XCTAssert(pa.retentionMethod == OBJC_ASSOCIATION_RETAIN, @"retentionMethod: %d", pa.retentionMethod);
 }
 
 - (void)testCharDefault
@@ -166,6 +186,9 @@
     o1.charDefault = 'c';
     XCTAssert(o1.charDefault == 'c', @"char: %c", o1.charDefault);
     XCTAssert(o2.charDefault == 'b', @"char: %c", o2.charDefault);
+
+    DPPPropertyAttribute *pa = [DPPPropertyAttribute propertyWithClass:[o1 class] propertyName:@"charDefault"];
+    XCTAssert(pa.retentionMethod == OBJC_ASSOCIATION_RETAIN, @"retentionMethod: %d", pa.retentionMethod);
 }
 
 - (void)testDoubleDefault
@@ -184,6 +207,9 @@
     XCTAssert(o1.doubleDefault == 124.0, @"double: %f", o1.doubleDefault);
     o1.doubleDefault = 456.0;
     XCTAssert(o1.doubleDefault == 456.0, @"double: %f", o1.doubleDefault);
+
+    DPPPropertyAttribute *pa = [DPPPropertyAttribute propertyWithClass:[o1 class] propertyName:@"doubleDefault"];
+    XCTAssert(pa.retentionMethod == OBJC_ASSOCIATION_RETAIN, @"retentionMethod: %d", pa.retentionMethod);
 }
 
 - (void)testFloatDefault
@@ -199,6 +225,9 @@
     XCTAssert(o1.floatDefault == 124.0f, @"float: %f", o1.floatDefault);
     o1.floatDefault = 456.0f;
     XCTAssert(o1.floatDefault == 456.0f, @"float: %f", o1.floatDefault);
+
+    DPPPropertyAttribute *pa = [DPPPropertyAttribute propertyWithClass:[o1 class] propertyName:@"floatDefault"];
+    XCTAssert(pa.retentionMethod == OBJC_ASSOCIATION_RETAIN, @"retentionMethod: %d", pa.retentionMethod);
 }
 
 - (void)testIntDefault
@@ -212,6 +241,9 @@
     XCTAssert(o2.intDefault == 555, @"int: %d", o2.intDefault);
     o1.intDefault = 456;
     XCTAssert(o1.intDefault == 456, @"int: %d", o1.intDefault);
+
+    DPPPropertyAttribute *pa = [DPPPropertyAttribute propertyWithClass:[o1 class] propertyName:@"intDefault"];
+    XCTAssert(pa.retentionMethod == OBJC_ASSOCIATION_RETAIN, @"retentionMethod: %d", pa.retentionMethod);
 }
 
 - (void)testIntegerDefault
@@ -229,6 +261,9 @@
     XCTAssert(o2.integerDefault == i2, @"integer: %ld", o2.integerDefault);
     o1.integerDefault = i3;
     XCTAssert(o1.integerDefault == i3, @"integer: %ld", o1.integerDefault);
+
+    DPPPropertyAttribute *pa = [DPPPropertyAttribute propertyWithClass:[o1 class] propertyName:@"integerDefault"];
+    XCTAssert(pa.retentionMethod == OBJC_ASSOCIATION_RETAIN, @"retentionMethod: %d", pa.retentionMethod);
 }
 
 - (void)testLongDefault
@@ -242,6 +277,9 @@
     XCTAssert(o2.longDefault == 555, @"long: %ld", o2.longDefault);
     o1.longDefault = 456;
     XCTAssert(o1.longDefault == 456, @"long: %ld", o1.longDefault);
+
+    DPPPropertyAttribute *pa = [DPPPropertyAttribute propertyWithClass:[o1 class] propertyName:@"longDefault"];
+    XCTAssert(pa.retentionMethod == OBJC_ASSOCIATION_RETAIN, @"retentionMethod: %d", pa.retentionMethod);
 }
 
 - (void)testLongLongDefault
@@ -255,6 +293,9 @@
     XCTAssert(o2.longLongDefault == 555, @"long: %lld", o2.longLongDefault);
     o1.longLongDefault = 456;
     XCTAssert(o1.longLongDefault == 456, @"long: %lld", o1.longLongDefault);
+
+    DPPPropertyAttribute *pa = [DPPPropertyAttribute propertyWithClass:[o1 class] propertyName:@"longLongDefault"];
+    XCTAssert(pa.retentionMethod == OBJC_ASSOCIATION_RETAIN, @"retentionMethod: %d", pa.retentionMethod);
 }
 
 - (void)testShortDefault
@@ -268,6 +309,9 @@
     XCTAssert(o2.shortDefault == 555, @"long: %hd", o2.shortDefault);
     o1.shortDefault = 456;
     XCTAssert(o1.shortDefault == 456, @"long: %hd", o1.shortDefault);
+    
+    DPPPropertyAttribute *pa = [DPPPropertyAttribute propertyWithClass:[o1 class] propertyName:@"shortDefault"];
+    XCTAssert(pa.retentionMethod == OBJC_ASSOCIATION_RETAIN, @"retentionMethod: %d", pa.retentionMethod);
 }
 
 - (void)testUnsignedCharDefault
@@ -281,6 +325,9 @@
     XCTAssert(o2.unsignedCharDefault == 'v', @"uchar: %u", o2.unsignedCharDefault);
     o1.unsignedCharDefault = '2';
     XCTAssert(o1.unsignedCharDefault == '2', @"uchar: %u", o1.unsignedCharDefault);
+    
+    DPPPropertyAttribute *pa = [DPPPropertyAttribute propertyWithClass:[o1 class] propertyName:@"unsignedCharDefault"];
+    XCTAssert(pa.retentionMethod == OBJC_ASSOCIATION_RETAIN, @"retentionMethod: %d", pa.retentionMethod);
 }
 
 - (void)testUnsignedDefault
@@ -294,6 +341,9 @@
     XCTAssert(o2.unsignedDefault == 555, @"uint: %u", o2.unsignedDefault);
     o1.unsignedDefault = 456;
     XCTAssert(o1.unsignedDefault == 456, @"uint: %u", o1.unsignedDefault);
+    
+    DPPPropertyAttribute *pa = [DPPPropertyAttribute propertyWithClass:[o1 class] propertyName:@"unsignedDefault"];
+    XCTAssert(pa.retentionMethod == OBJC_ASSOCIATION_RETAIN, @"retentionMethod: %d", pa.retentionMethod);
 }
 
 - (void)testUnsignedIntegerDefault
@@ -307,6 +357,9 @@
     XCTAssert(o2.unsignedIntegerDefault == 555, @"uint: %lu", o2.unsignedIntegerDefault);
     o1.unsignedIntegerDefault = 456;
     XCTAssert(o1.unsignedIntegerDefault == 456, @"uint: %lu", o1.unsignedIntegerDefault);
+    
+    DPPPropertyAttribute *pa = [DPPPropertyAttribute propertyWithClass:[o1 class] propertyName:@"unsignedIntegerDefault"];
+    XCTAssert(pa.retentionMethod == OBJC_ASSOCIATION_RETAIN, @"retentionMethod: %d", pa.retentionMethod);
 }
 
 - (void)testUnsignedLongDefault
@@ -320,6 +373,9 @@
     XCTAssert(o2.unsignedLongDefault == 555, @"uint: %lu", o2.unsignedLongDefault);
     o1.unsignedLongDefault = 456;
     XCTAssert(o1.unsignedLongDefault == 456, @"uint: %lu", o1.unsignedLongDefault);
+    
+    DPPPropertyAttribute *pa = [DPPPropertyAttribute propertyWithClass:[o1 class] propertyName:@"unsignedLongDefault"];
+    XCTAssert(pa.retentionMethod == OBJC_ASSOCIATION_RETAIN, @"retentionMethod: %d", pa.retentionMethod);
 }
 
 - (void)testUnsignedShortDefault
@@ -333,6 +389,9 @@
     XCTAssert(o2.unsignedShortDefault == 555, @"uint: %hu", o2.unsignedShortDefault);
     o1.unsignedShortDefault = 456;
     XCTAssert(o1.unsignedShortDefault == 456, @"uint: %hu", o1.unsignedShortDefault);
+    
+    DPPPropertyAttribute *pa = [DPPPropertyAttribute propertyWithClass:[o1 class] propertyName:@"unsignedShortDefault"];
+    XCTAssert(pa.retentionMethod == OBJC_ASSOCIATION_RETAIN, @"retentionMethod: %d", pa.retentionMethod);
 }
 
 - (void)testEnumDefault
@@ -346,6 +405,9 @@
     XCTAssert(o2.enumDefault == kEnumDProperty2, @"enum: %d", o2.enumDefault);
 
     XCTAssert(o1.enumDefault == kEnumDProperty1, @"enum: %d", o1.enumDefault);
+    
+    DPPPropertyAttribute *pa = [DPPPropertyAttribute propertyWithClass:[o1 class] propertyName:@"enumDefault"];
+    XCTAssert(pa.retentionMethod == OBJC_ASSOCIATION_RETAIN, @"retentionMethod: %d", pa.retentionMethod);
 }
 
 - (void)testStructDefault
@@ -364,6 +426,9 @@
 
     XCTAssert(o1.structDefault.x == s1.x, @"struct.x: %d", o1.structDefault.x);
     XCTAssert(o1.structDefault.y == s1.y, @"struct.y: %d", o1.structDefault.y);
+
+    DPPPropertyAttribute *pa = [DPPPropertyAttribute propertyWithClass:[o1 class] propertyName:@"structDefault"];
+    XCTAssert(pa.retentionMethod == OBJC_ASSOCIATION_RETAIN, @"retentionMethod: %d", pa.retentionMethod);
 }
 
 - (void)testTypeOfDefault
@@ -382,6 +447,9 @@
 
     XCTAssert(o1.typedefDefault.x == s1.x, @"struct.x: %d", o1.typedefDefault.x);
     XCTAssert(o1.typedefDefault.y == s1.y, @"struct.y: %d", o1.typedefDefault.y);
+    
+    DPPPropertyAttribute *pa = [DPPPropertyAttribute propertyWithClass:[o1 class] propertyName:@"typedefDefault"];
+    XCTAssert(pa.retentionMethod == OBJC_ASSOCIATION_RETAIN, @"retentionMethod: %d", pa.retentionMethod);
 }
 
 - (void)testUnionDefault
@@ -400,6 +468,9 @@
 
     XCTAssert(o1.unionDefault.x == s1.x, @"union.x: %d", o1.unionDefault.x);
     XCTAssert(o1.unionDefault.y == s1.y, @"union.y: %d", o1.unionDefault.y);
+    
+    DPPPropertyAttribute *pa = [DPPPropertyAttribute propertyWithClass:[o1 class] propertyName:@"unionDefault"];
+    XCTAssert(pa.retentionMethod == OBJC_ASSOCIATION_RETAIN, @"retentionMethod: %d", pa.retentionMethod);
 }
 
 int testFunctionDProperty1(char *c)
@@ -424,6 +495,9 @@ int testFunctionDProperty2(char *c)
     XCTAssert(o2.functionPointerDefault == f2, @"pointer");
 
     XCTAssert(o1.functionPointerDefault == f1, @"pointer");
+    
+    DPPPropertyAttribute *pa = [DPPPropertyAttribute propertyWithClass:[o1 class] propertyName:@"functionPointerDefault"];
+    XCTAssert(pa.retentionMethod == OBJC_ASSOCIATION_RETAIN, @"retentionMethod: %d", pa.retentionMethod);
 }
 
 - (void)testIntPointerDefault
@@ -439,6 +513,9 @@ int testFunctionDProperty2(char *c)
     XCTAssert(o2.intPointerDefault == &i2, @"pointer");
 
     XCTAssert(o1.intPointerDefault == &i1, @"pointer");
+    
+    DPPPropertyAttribute *pa = [DPPPropertyAttribute propertyWithClass:[o1 class] propertyName:@"intPointerDefault"];
+    XCTAssert(pa.retentionMethod == OBJC_ASSOCIATION_RETAIN, @"retentionMethod: %d", pa.retentionMethod);
 }
 
 - (void)testVoidPointerDefault
@@ -456,6 +533,9 @@ int testFunctionDProperty2(char *c)
     XCTAssert(o2.voidPointerDefault == v2, @"pointer");
 
     XCTAssert(o1.voidPointerDefault == v1, @"pointer");
+    
+    DPPPropertyAttribute *pa = [DPPPropertyAttribute propertyWithClass:[o1 class] propertyName:@"voidPointerDefault"];
+    XCTAssert(pa.retentionMethod == OBJC_ASSOCIATION_RETAIN, @"retentionMethod: %d", pa.retentionMethod);
 }
 
 - (void)testIdDefault

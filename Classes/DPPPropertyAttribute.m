@@ -51,7 +51,7 @@
 		p = strchr(p+1, ',' );
 	} while (1);
     
-    if([self isPrimitive]){
+    if([self isPrimitive] || [self isPointer]){
         //being converted to NSNumber when saving.
         self.retentionMethod = OBJC_ASSOCIATION_RETAIN;
     } else {
@@ -79,9 +79,21 @@
     self.type == 'd' ||
     self.type == 'i' ||
     self.type == 'f' ||
+    self.type == 'q' ||
     self.type == 'l' ||
     self.type == 's' ||
-    self.type == 'I';
+    self.type == 'C' ||
+    self.type == 'I' ||
+    self.type == 'Q' ||
+    self.type == 'S' ||
+    self.type == 'B';
+}
+
+- (BOOL) isPointer
+{
+    return self.type == '{' ||
+    self.type == '(' ||
+    self.type == '^';
 }
 
 @end
