@@ -9,13 +9,18 @@ see http://stackoverflow.com/questions/8733104/objective-c-property-instance-var
 ##Awesome! So, how do I use it?
 
 Nothing special. Just add property normally in a @interface and use @dynamic in an @implementation.
+
+YourClass.h
 ```
 @interface YourClass (YourCategory)
 
 @property NSString *yourProperty;
 
 @end
+```
 
+YourClass.m
+```
 @implementation YourClass (YourCategory)
 
 @dynamic yourProperty;
