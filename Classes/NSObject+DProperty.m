@@ -338,7 +338,7 @@ void DPP_accessorLongLongSetter(id self, SEL _cmd, long long newValue)
     id tmp = [NSNumber numberWithLongLong:newValue];
     objc_setAssociatedObject(self, prop.key, tmp, prop.retentionMethod);
 }
-long DPP_accessorLongLongGetter(id self, SEL _cmd)
+long long DPP_accessorLongLongGetter(id self, SEL _cmd)
 {
     DPPPropertyAttribute *prop = DPP_getProp(self, _cmd);
     NSNumber *tmp = objc_getAssociatedObject(self, prop.key);
