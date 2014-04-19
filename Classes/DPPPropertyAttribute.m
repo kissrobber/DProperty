@@ -26,7 +26,7 @@
 		return self;
     
     const char *p = attrs;
-    char retentionMethod;
+    char retentionMethod = 0;
     BOOL atomic = YES;
     BOOL weak = NO;
 	do
