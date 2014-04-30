@@ -208,12 +208,10 @@ static void DPP_initialize()
 {
     NSMutableDictionary *dict = objc_getAssociatedObject(self, &DPPPropertyDictionaryKey);
     if(dict == nil){
-        @synchronized(dict){
-            dict = objc_getAssociatedObject(self, &DPPPropertyDictionaryKey);
-            if(dict == nil){
-                dict = [NSMutableDictionary dictionary];
-                self.DPP_keysDictionary = dict;
-            }
+        dict = objc_getAssociatedObject(self, &DPPPropertyDictionaryKey);
+        if(dict == nil){
+            dict = [NSMutableDictionary dictionary];
+            self.DPP_keysDictionary = dict;
         }
     }
     return dict;
