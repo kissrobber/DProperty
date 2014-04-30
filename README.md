@@ -10,7 +10,7 @@ http://stackoverflow.com/questions/8733104/objective-c-property-instance-variabl
 
 ##Awesome! So, how do I use it?
 
-Nothing special. Just add a property normally in a @interface and use @dynamic in an @implementation.
+Nothing special. Just simply add a property in a @interface and use @dynamic in an @implementation.
 
 YourClass.h
 ```
